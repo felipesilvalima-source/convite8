@@ -95,32 +95,65 @@
             width: 100%;
         }
 
-        /* ESTILO: AUTO DA COMPADECIDA / CORDEL (Página 2) */
-        .tema-cordel {
-            background-color: var(--cordel-papel);
-            background-image: radial-gradient(rgba(0,0,0,0.04) 15%, transparent 16%);
-            background-size: 4px 4px;
-            border: 8px solid var(--cordel-preto);
-            color: var(--cordel-preto);
-            border-image: repeating-linear-gradient(45deg, #1a1a1a, #1a1a1a 10px, #f1ebd9 10px, #f1ebd9 20px) 10;
-        }
-        .tema-cordel h1 {
-            font-size: 2.2rem;
-            text-transform: uppercase;
-            border-bottom: 3px dashed var(--cordel-preto);
-            padding-bottom: 5px;
-            width: 100%;
-            text-align: center;
-        }
-        .frase-chico {
-            font-style: italic;
-            font-weight: bold;
-            background: rgba(0,0,0,0.05);
-            padding: 6px;
-            border-left: 4px solid var(--cordel-preto);
-            text-align: center;
-            font-size: 0.95rem;
-        }
+       /* ESTILO: AUTO DA COMPADECIDA / CORDEL (Página 2) */
+.tema-cordel {
+    background-color: var(--cordel-papel);
+    background-image: radial-gradient(rgba(0,0,0,0.04) 15%, transparent 16%);
+    background-size: 4px 4px;
+    border: 8px solid var(--cordel-preto);
+    color: var(--cordel-preto);
+    border-image: repeating-linear-gradient(45deg, #1a1a1a, #1a1a1a 10px, #f1ebd9 10px, #f1ebd9 20px) 10;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tema-cordel h1 {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    border-bottom: 3px dashed var(--cordel-preto);
+    padding-bottom: 5px;
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+}
+
+.frase-chico {
+    font-style: italic;
+    font-weight: bold;
+    background: rgba(0,0,0,0.05);
+    padding: 8px;
+    border-left: 4px solid var(--cordel-preto);
+    text-align: center;
+    font-size: 0.95rem;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 15px 0;
+}
+
+/* Novo bloco para formatar os parágrafos do cordel */
+.texto-cordel {
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.texto-cordel p {
+    font-size: 1.1rem;
+    margin: 0 0 15px 0;
+}
+
+.texto-cordel p:last-child {
+    margin-bottom: 0;
+}
+
+.destaque {
+    font-weight: bold;
+    color: #b35c00; /* Tom de marrom/couro para o destaque */
+}
+
 
         /* Textos Gerais */
         p {
@@ -200,22 +233,25 @@
     </div>
 
     <!-- PÁGINA 2: O AUTO DO THEO (CORDEL) -->
-    <div class="pagina tema-cordel atras" id="p2">
-        <h1>O Auto do Theo</h1>
-        
-        <!-- Foto pequena centralizada do Theo Cangaceiro -->
-        <img class="foto-perfil foto-cordel" src="theo1.jpg.jpeg" alt="Theo Cangaceiro">
-        
-        <p class="frase-chico">"Misericórdia, que menino bonito da gota serena!"</p>
-        
-   <p>Valha-me Nossa Senhora, O sertão vai festejar! O cangaceiro mais lindo Oito meses vai completar. O nome dele é <span class="destaque">Theo</span>, Dono desse rincão e lugar!</p>
+   <div class="pagina tema-cordel atras" id="p2">
+    <h1>O Auto do Theo</h1>
+    
+    <!-- Foto pequena centralizada do Theo Cangaceiro -->
+    <img class="foto-perfil foto-cordel" src="theo1.jpg.jpeg" alt="Theo Cangaceiro">
+    
+    <p class="frase-chico">"Misericórdia, que menino bonito da gota serena!"</p>
+    
+    <div class="texto-cordel">
+        <p>Valha-me Nossa Senhora, O sertão vai festejar! O cangaceiro mais lindo Oito meses vai completar. O nome dele é <span class="destaque">Theo</span>, Dono desse rincão e lugar!</p>
         <p>Chicó mandou o aviso, Correndo o sertão inteiro: "Quem faltar a essa festa Vai ver o Major fogaceiro!" Antônio Morais não perdoa Quem desfeitear o guerreiro!</p>
-        
-        <div class="botoes linha-botoes">
-            <button class="btn btn-cordel" style="flex:1;" onclick="virar(2, 1)">← Voltar</button>
-            <button class="btn btn-cordel" style="flex:1;" onclick="virar(2, 3)">Grande Final →</button>
-        </div>
     </div>
+    
+    <div class="botoes linha-botoes">
+        <button class="btn btn-cordel" style="flex:1;" onclick="virar(2, 1)">← Voltar</button>
+        <button class="btn btn-cordel" style="flex:1;" onclick="virar(2, 3)">Grande Final →</button>
+    </div>
+</div>
+
 
     <!-- PÁGINA 3: ENCONTRO DOS DOIS TEMAS + CONFIRMAÇÃO -->
     <div class="pagina tema-copa atras" id="p3">
